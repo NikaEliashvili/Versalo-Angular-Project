@@ -226,3 +226,11 @@ input[type="file"]::file-selector-button:hover {
     font-size: 15px;
   }
 }
+
+@media (max-width: 300px) {
+
+  html,
+  body {
+    font-size: 13px;
+  }
+}
