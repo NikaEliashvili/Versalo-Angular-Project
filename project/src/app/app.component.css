@@ -17,11 +17,11 @@ nav {
 }
 
 nav.active {
-  animation: respNavbarAnimation 0.2s linear;
+  animation: respNavbarAnimation 0.18s ease-out;
 }
 
 nav.inactivenavbar {
-  animation: respNavbarAnimationInactive 0.2s linear;
+  animation: respNavbarAnimationInactive 0.3s linear;
   height: 58px;
 }
 
@@ -66,6 +66,34 @@ nav.inactivenavbar {
   }
 }
 
+@keyframes respMenuAnimation {
+  from {
+    opacity: 0;
+    filter: opacity(0);
+    transform: translateY(-40%);
+  }
+
+  to {
+    opacity: 1;
+    filter: opacity(1);
+    transform: translateY(0);
+  }
+}
+
+@keyframes respMenuAnimationInactive {
+  from {
+    opacity: 1;
+    filter: opacity(1);
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 0;
+    filter: opacity(0);
+    transform: translateY(-100%);
+  }
+}
+
 .navbar {
   max-width: 1440px;
   display: flex;
@@ -77,21 +105,25 @@ nav.inactivenavbar {
 
 .responsive_navbar {
   display: flex;
-  height: 0;
+  height: auto;
   opacity: 0;
-  transform: translateY(-300px);
-  transition: all 0.3s;
+  visibility: hidden;
+  transition: all 0s;
   padding: 2rem 0;
   z-index: -1;
+
+  /* animation: respMenuAnimationInactive 0.1s 0 linear; */
 }
 
+
 .responsive_navbar.active {
-  transform: translateY(0);
+  visibility: visible;
   opacity: 1;
   height: auto;
-  transition: all 0.3s;
+  transition: all 0.25s linear;
   box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.2);
   border-radius: 0 0 0.5rem 0.5rem;
+  /* animation: respMenuAnimation 0.2s 0 linear; */
 }
 
 .navbar_menu {
@@ -448,6 +480,14 @@ main {
 @media (max-width: 880px) {
   .navbar ul {
     display: none;
+  }
+
+  .menu-icon {
+    transform: scale(1.25);
+    background: var(--main_BGcolor);
+    border-radius: 0.125rem;
+    margin-left: 0.5rem;
+
   }
 
   .navbar_menu {

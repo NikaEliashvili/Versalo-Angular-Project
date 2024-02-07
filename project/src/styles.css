@@ -57,6 +57,7 @@ button:disabled {
 }
 
 input[type="file"]::file-selector-button {
+  all: unset;
   margin-right: 1rem;
   border: none;
   background: var(--btn_BGcolor);

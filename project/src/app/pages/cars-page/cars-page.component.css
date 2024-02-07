@@ -49,7 +49,7 @@ form select:hover {
 
 form select option:first-child {
   color: black;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 form select option {
