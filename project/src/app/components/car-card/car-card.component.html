@@ -10,7 +10,7 @@
   >
     <img
       src="{{ carObj.carImg || '/assets/no-image.svg' }}"
-      onerror="()=>{this.src='/assets/no-image.svg'; this.onerror = null}"
+      onerror="this.src='/assets/no-image.svg'"
       fill
       loading="lazy"
     />
