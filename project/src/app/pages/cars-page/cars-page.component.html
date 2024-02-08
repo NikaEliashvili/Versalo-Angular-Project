@@ -2,7 +2,7 @@
   <div class="filter_content">
     <form [formGroup]="carForm">
       <mat-form-field appearance="outline">
-        <mat-label>Manufacturer</mat-label>
+        <mat-label>{{ "manufacturer" | translate }}</mat-label>
         <mat-select formControlName="Model">
           <mat-option>None</mat-option>
           <mat-option
@@ -14,7 +14,7 @@
         </mat-select>
       </mat-form-field>
       <mat-form-field appearance="outline">
-        <mat-label>Category</mat-label>
+        <mat-label>{{ "category" | translate }}</mat-label>
         <mat-select formControlName="category">
           <mat-option>None</mat-option>
           <mat-option
@@ -28,7 +28,7 @@
 
       <!-- <div class="from_to"> -->
       <mat-form-field appearance="outline">
-        <mat-label>Year From</mat-label>
+        <mat-label>{{ "year_from" | translate }}</mat-label>
         <mat-select formControlName="yearFrom">
           <mat-option>None</mat-option>
           <mat-option *ngFor="let year of carList[0]?.carYear" [value]="year">
@@ -37,7 +37,7 @@
         </mat-select>
       </mat-form-field>
       <mat-form-field appearance="outline">
-        <mat-label>Year To</mat-label>
+        <mat-label>{{ "year_to" | translate }}</mat-label>
         <mat-select formControlName="yearTo">
           <mat-option>None</mat-option>
           <mat-option *ngFor="let year of yearToArr" [value]="year">
@@ -48,7 +48,7 @@
       <!-- </div> -->
       <!-- <div class="from_to"> -->
       <mat-form-field appearance="outline">
-        <mat-label>Price From</mat-label>
+        <mat-label>{{ "price_from" | translate }}</mat-label>
         <mat-select formControlName="priceFrom">
           <mat-option>None</mat-option>
           <mat-option
@@ -60,7 +60,7 @@
         </mat-select>
       </mat-form-field>
       <mat-form-field appearance="outline">
-        <mat-label>Price To</mat-label>
+        <mat-label>{{ "price_to" | translate }}</mat-label>
         <mat-select formControlName="priceTo">
           <mat-option>None</mat-option>
           <mat-option *ngFor="let price of priceToArr" [value]="price">
@@ -70,7 +70,7 @@
       </mat-form-field>
       <!-- </div> -->
       <mat-form-field id="gearbox" appearance="outline">
-        <mat-label>Gear Box</mat-label>
+        <mat-label>{{ "gear_box" | translate }}</mat-label>
         <mat-select formControlName="gearBox">
           <mat-option>None</mat-option>
           <mat-option
